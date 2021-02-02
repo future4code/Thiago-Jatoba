@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles.css"> 
     <title>Adicionar Produto</title>
 </head>
 <body>
     <div>
-        <p>Chão de Taco HOME DESIGN</p>
+        <p class="store-id">Chão de Taco HOME DESIGN</p>
     </div>
     
-    <div>
+    <div class="menu-bar">
         <a href="./index.html">Página Inicial</a>
         <a href="./ctrl-estoque.html">Controle de Estoque</a>
         <a href="./add-produto.html">Adicionar Produto</a>
@@ -28,8 +29,7 @@
         
         <div>
             <label for="descricao">Descrição do produto: </label>
-            <!-- Adicione o id apropriado para o input abaixo -->
-            <input type="text" id="descrição-produto" name="descrição">
+            <textarea name="caracteristica" id="informações técnicas"></textarea>
         </div>
         
         <div>
@@ -44,12 +44,23 @@
             <input type="number" min="0" id="quantidade-disponivel" name="quantidade">
         </div>
 
-        <div class="form-add">
-            <!-- Adicione ao type do botão abaixo o valor para que ele submeta o formulário -->
-            <button type="submit">Adicionar</button>
+        <div>
+            <button class="add-form" type="submit">Adicionar</button>
         </div>
 
     </form>
+    <footer class="social-media">
+        <div>
+            
+            <p class="social-media">Siga-nos nas redes sociais!</p>
+
+            <div>
+                <img src="https://image.flaticon.com/icons/png/512/25/25305.png" height="100" width="100"/>
+                <img src="https://image.flaticon.com/icons/png/512/25/25425.png" height="100" width="100"/>
+                <img src="https://image.flaticon.com/icons/png/512/8/8800.png" height="100" width="100"/>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
