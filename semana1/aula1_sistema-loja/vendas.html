@@ -1,19 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="assets/style.css">
-    
-    <title>Chão de Taco HOME DESIGN</title>
-
+    <link rel="stylesheet" type="text/css" href="./assets/style.css"> 
+    <title>Cadastrar Produto</title>
 </head>
-<main>
+
 <body>
-    
-   <header>
+    <header>
         <div class="header">
             <div class="logo">
                 <div class="logoimg">
@@ -32,40 +28,40 @@
                 </nav>
             </div>
         </div>
-   </header>
+    </header>
+    <main>
+        <h2>Cadastro de Vendas</h2>
+        <form action="#">
+            <div>
+                <label for="produto">Produto: </label>
+                <input type="text" id="produto" name="produto-vendido">
+            </div>
+            
+            <div>
+                <label for="vendedor">Vendedor: </label>
+                <input type="text" id="funcionario" name="vendedor">
+            </div>
+            
+            <div>
+                <label for="preco">Preço (em R$): </label>
+                <input type="text" id="valor-em-reais" name="preço">
+            </div>
+            
+            <div>
+                <label for="disponível">Quantidade vendida: </label>
+                <input type="number" min="0" id="quantidade-venda" name="quantidade">
+            </div>
 
-    <h2>Funcionários</h2>
-    <table class="issues">
-        <thead>
-            <tr>
-                <th>Nome</th>
-                <th>CPF</th>
-                <th>Matrícula</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Luiz Azevedo</td>
-                <td>765489321-90</td>
-                <td align="center">001-20</td>
-            </tr>
-            <tr>
-                <td>Carla Regina</td>
-                <td>987654321-09</td>
-                <td align="center">003-60</td>
-            </tr>
-            <tr>
-                <td>José do Patrocínio</td>
-                <td>765345987-01</td>
-                <td align="center">023-80</td>
-            </tr>
-            <tr>
-                <td>Mariana Silva Souza</td>
-                <td>345321218-67</td>
-                <td align="center">013-40</td>
-            </tr>
-        </tbody>
-    </table>
+            <div>
+                <label for="obs">Observações: </label>
+                <textarea name="observações" id="considerações-vendedor"></textarea>
+            </div>
+
+            <div>
+                <button class="add-form" type="submit">Cadastrar</button>
+            </div>
+
+        </form>
     </main>
    
     <footer id="finalsection">
@@ -77,10 +73,7 @@
             <img src="https://image.flaticon.com/icons/png/512/25/25425.png" height="50" width="50"/>
             <img src="https://image.flaticon.com/icons/png/512/8/8800.png" height="50" width="50"/>
         </div>
-    </footer>
-
-</body>
-</html>
         
+    </footer>
 </body>
 </html>

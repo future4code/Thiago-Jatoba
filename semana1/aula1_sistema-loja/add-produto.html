@@ -4,22 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="styles.css"> 
+    <link rel="stylesheet" type="text/css" href="./assets/style.css"> 
     <title>Adicionar Produto</title>
 </head>
+
 <body>
-    <div>
-        <p class="store-id">Chão de Taco HOME DESIGN</p>
-    </div>
-    
-    <div class="menu-bar">
-        <a href="./index.html">Página Inicial</a>
-        <a href="./ctrl-estoque.html">Controle de Estoque</a>
-        <a href="./add-produto.html">Adicionar Produto</a>
-        <a href="./funcionarios.html">Funcionários</a>
+<header>
+    <div class="header">
+        <div class="logo">
+            <div class="logoimg">
+            </div>
+        </div>
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li class="active"><a href="./index.html">Home</a></li>
+                    <li><a href="./ctrl-estoque.">Vendas</a></li>
+                    <li><a href="./ctrl-estoque.">Histórico de Vendas</a></li>
+                    <li><a href="./ctrl-estoque.">Estoque</a></li>
+                    <li><a href="./add-produto.html">Produto</a></li>
+                    <li><a href="./funcionarios.html">Funcionários</a></li>
+                </ul> 
+            </nav>
+        </div>
     </div>
 
-    
+</header>
+
+<main>
+
     <h2>Adicionar Produto</h2>
     <form action="#">
         <div>
@@ -34,12 +47,10 @@
         
         <div>
             <label for="preco">Preço (em R$): </label>
-            <!-- Adicione o id apropriado e o type para receber números abaixo -->
             <input type="text" id="valor-em-reais" name="preço">
         </div>
         
         <div>
-            <!-- Preencha as propriedades necessárias para os elementos abaixo -->
             <label for="disponível">Quantidade disponível: </label>
             <input type="number" min="0" id="quantidade-disponivel" name="quantidade">
         </div>
@@ -49,18 +60,18 @@
         </div>
 
     </form>
-    <footer class="social-media">
-        <div>
-            
-            <p class="social-media">Siga-nos nas redes sociais!</p>
+</main>   
+   
+    <footer id="finalsection">
 
-            <div>
-                <img src="https://image.flaticon.com/icons/png/512/25/25305.png" height="100" width="100"/>
-                <img src="https://image.flaticon.com/icons/png/512/25/25425.png" height="100" width="100"/>
-                <img src="https://image.flaticon.com/icons/png/512/8/8800.png" height="100" width="100"/>
-            </div>
+        <p>Siga-nos nas redes sociais!</p>
+
+        <div class="smlogo">
+            <img src="https://image.flaticon.com/icons/png/512/25/25305.png" height="50" width="50"/>
+            <img src="https://image.flaticon.com/icons/png/512/25/25425.png" height="50" width="50"/>
+            <img src="https://image.flaticon.com/icons/png/512/8/8800.png" height="50" width="50"/>
         </div>
-    </footer>
 
+    </footer>
 </body>
 </html>

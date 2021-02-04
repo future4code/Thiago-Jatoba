@@ -1,85 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <title>Controle de Estoque</title>
-</head>
-<body>
-    <div>
-        <p class="store-id">Chão de Taco HOME DESIGN</p>
-    </div>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
     
-    <div class="menu-bar">
-        <a href="./index.html">Página Inicial</a>
-        <a href="./ctrl-estoque.html">Controle de Estoque</a>
-        <a href="./add-produto.html">Adicionar Produto</a>
-        <a href="./funcionarios.html">Funcionários</a>
-    </div>
+    <title>Chão de Taco HOME DESIGN</title>
 
-    <h2>Controle de Estoque</h2>
+</head>
 
-    <table class="issues">
-        <thead>
-            <tr>
-                <th>Foto</th>
-                <th>Descrição</th>
-                <th>Preço (R$)</th>
-                <th>Quantidade disponível</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><img src="./images/Conjunto-talheres-prata-e-branco.jpg" alt="talher_pratabranco" width="160" height="150"/></td>
-                <td> Talher Branco e Prata</td>
-                <td> R$ 39,90 </td>
-                <td align="center"> 30 </td>
-            </tr>
-
-            <tr>
-                <td><img src="./images/Adega-estante-preto-e-pinus.jpg" alt="estante_adega_prt" width="160" height="150"/></td>
-                <td> Adega Estante em Pinus/Preto </td>
-                <td> R$ 589,99</td>
-                <td align="center"> 5 </td>
-            </tr>
-
-            <tr>
-                <td><img src="./images/Cadeira-butterfly-cinza.jpg" alt="cadeira_btfl-cinza" width="160" height="150"/></td>
-                <td> Cadeira Butterfly Cinza </td>
-                <td> R$ 896,90 </td>
-                <td align="center"> Indisponível no Fornecedor </td>
-            </tr>
-
-            <tr>
-                <td><img src="./images/Banco-escada-de-madeira-preto.jpg" alt="banco_escada-prt" width="160" height="150"/></td>
-                <td> Banco Escada em Madeira Preto </td>
-                <td> R$ 299,90 </td>
-                <td align="center"> 2 </td>
-            </tr>
-        </tbody>
-        <!-- Crie mais uma linha desta tabela abaixo \/ -->
-        <tr>
-            <td><img src="./images/Regador-de-inox.jpg" alt="regador_inox" width="160" height="150"/></td>
-            <td> Regador em Inox </td>
-            <td> R$ 99,90 </td>
-            <td align="center"> 20 </td>
-        </tr>
-
-    </table>
-    <footer class="social-media">
-        <div>
-            
-            <p class="social-media">Siga-nos nas redes sociais!</p>
-
-            <div>
-                <img src="https://image.flaticon.com/icons/png/512/25/25305.png" height="100" width="100"/>
-                <img src="https://image.flaticon.com/icons/png/512/25/25425.png" height="100" width="100"/>
-                <img src="https://image.flaticon.com/icons/png/512/8/8800.png" height="100" width="100"/>
+<body>
+    
+   <header>
+        <div class="header">
+            <div class="logo">
+                <div class="logoimg">
+                </div>
+            </div>
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li class="active"><a href="./index.html">Home</a></li>
+                        <li><a href="./ctrl-estoque.">Vendas</a></li>
+                        <li><a href="./ctrl-estoque.">Histórico de Vendas</a></li>
+                        <li><a href="./ctrl-estoque.">Estoque</a></li>
+                        <li><a href="./add-produto.html">Produto</a></li>
+                        <li><a href="./funcionarios.html">Funcionários</a></li>
+                    </ul> 
+                </nav>
             </div>
         </div>
+   </header>
+
+    <main>
+        <h2>Controle de Estoque</h2>
+
+        <table class="issues">
+            <thead>
+                <tr>
+                    <th>Foto</th>
+                    <th>Descrição</th>
+                    <th>Preço (R$)</th>
+                    <th>Quantidade disponível</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="./images/Conjunto-talheres-prata-e-branco.jpg" alt="talher_pratabranco" width="160" height="150"/></td>
+                    <td> Talher Branco e Prata</td>
+                    <td> R$ 39,90 </td>
+                    <td align="center"> 30 </td>
+                </tr>
+
+                <tr>
+                    <td><img src="./images/Adega-estante-preto-e-pinus.jpg" alt="estante_adega_prt" width="160" height="150"/></td>
+                    <td> Adega Estante em Pinus/Preto </td>
+                    <td> R$ 589,99</td>
+                    <td align="center"> 5 </td>
+                </tr>
+
+                <tr>
+                    <td><img src="./images/Cadeira-butterfly-cinza.jpg" alt="cadeira_btfl-cinza" width="160" height="150"/></td>
+                    <td> Cadeira Butterfly Cinza </td>
+                    <td> R$ 896,90 </td>
+                    <td align="center"> Indisponível no Fornecedor </td>
+                </tr>
+
+                <tr>
+                    <td><img src="./images/Banco-escada-de-madeira-preto.jpg" alt="banco_escada-prt" width="160" height="150"/></td>
+                    <td> Banco Escada em Madeira Preto </td>
+                    <td> R$ 299,90 </td>
+                    <td align="center"> 2 </td>
+                </tr>
+            </tbody>
+                <tr>
+                    <td><img src="./images/Regador-de-inox.jpg" alt="regador_inox" width="160" height="150"/></td>
+                    <td> Regador em Inox </td>
+                    <td> R$ 99,90 </td>
+                    <td align="center"> 20 </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer id="finalsection">
+
+        <p>Siga-nos nas redes sociais!</p>
+
+        <div class="smlogo">
+            <img src="https://image.flaticon.com/icons/png/512/25/25305.png" height="50" width="50"/>
+            <img src="https://image.flaticon.com/icons/png/512/25/25425.png" height="50" width="50"/>
+            <img src="https://image.flaticon.com/icons/png/512/8/8800.png" height="50" width="50"/>
+        </div>
     </footer>
+
+</body>
+</html>
 
 </body>
 </html>
