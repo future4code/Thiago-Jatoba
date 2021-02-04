@@ -7,6 +7,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /*bug 10 - fontes family correta incluida*/
 }
 
 h2 {
@@ -19,6 +20,8 @@ h2 {
 input {
     height: 20px;
     width: 500px;
+    outline: none; /*bug 13 - retirando marcação azul do campo de texto*/
+    border-width: 0 0 2px 0 /*bug 9 - caixa de texto transformada em 1 linha*/
 }
 
 button:focus {
@@ -33,9 +36,9 @@ div>p:first-child {
     display: inline;
 }
 
-div img {
+/*div img {
     background: black;
-}
+}  bug 6 - esta div não deveria estar colorizada*/
 
 .botao-amarelo {
     background-color: #ffaf43;
@@ -45,6 +48,7 @@ div img {
     font-size: 20px;
     color: white;
     text-align: center;
+    margin: 60px; /*bug2 - separando botão amarelo*/
 }
 
 .botao-amarelo:hover {
@@ -52,14 +56,19 @@ div img {
 }
 
 .container {
-    height: 300px;
+    height: 210px; /*bug 3 - readequando área do container*/
     text-align: center;
 }
 
 .icone {
     height: 15px;
+    width: 15px; /*bug 7 - incluir a largura e tornar o icone nitido*/
 }
 
+a .icone:hover {
+    background-color: black;
+    opacity:0.6;
+}
 
 /** 
   *
@@ -70,21 +79,24 @@ div img {
 #container-de-descricao {
     background-color: #2274a5;
     color: white;
+    padding: 60px; /*bug 3 - afastando o texto da borda*/
 }
 
 #container-de-descricao>ol {
     padding: 15px 0px;
+    list-style-position: inside; /*bug 12 - unindo os numeros da <ol>*/
 }
 
 #container-para-comprar {
     background-color: #e7eb90;
+    padding: 60px; /*bug 2 - afastando título do topo*/
 }
 
 #container-para-comprar>p {
     color: #c44f00;
     padding: 100px 0;
     font-size: 60px;
-    margin: 300px;
+    margin: 220px; /*bug 2 - colocando o botão centralizado*/
 }
 
 
@@ -101,7 +113,13 @@ div:last-child {
 
 table {
     width: 60%;
-}
+    margin: auto;
+    padding: auto;
+} /*bug 11 - centralizada a tabela com margin e padding*/
+
+tbody {
+    text-align: center;
+} /*bug 5 - texto centralizado*/ 
 
 td button {
     background-color: #fadf63;
@@ -110,6 +128,13 @@ td button {
     border-radius: 5px;
     color: black;
 }
+td button:hover {
+    background-color: #635a3d
+} /*bug 8 - efeito de sobreposição padronizado com o botão 'Voltar'*/
+
+td button:active {
+    background-color: orangered;
+} /*bug 8 - efeito de clique adicionado*/
 
 .container-do-search {
     margin-top: 20px;
