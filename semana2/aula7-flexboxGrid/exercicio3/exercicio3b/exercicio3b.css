@@ -9,7 +9,7 @@ body {
 
 #top-container{
     display: grid;
-    grid-template-columns: 350px 950px;
+    grid-template-columns: 440px 1000px;
     text-align:center;
     line-height: 7;
 }
