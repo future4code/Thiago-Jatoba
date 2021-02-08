@@ -51,40 +51,40 @@
     justify-content: flex-end;
 }
 
-      #pond {
-        display: flex;
+11- #pond {
+      display: flex;
       flex-direction: column;
       justify-content: flex-end;
       }
       
-      #pond {
-        display: flex;
+12- #pond {
+      display: flex;
       flex-direction: column-reverse;
       justify-content: space-between;
       }
 
-      #pond {
-        display: flex;
+13- #pond {
+      display: flex;
       flex-direction: row-reverse;
       justify-content: center;
       align-items: flex-end;
       }
 
-      #pond {
-        display: flex;
+14- #pond {
+      display: flex;
       }
       .yellow {
       order: 1
       }
     
-      #pond {
+15- #pond {
         display: flex;
       }
       .red {
       order: -3
       }
 
-      #pond {
+16- #pond {
         display: flex;
         align-items: flex-start;
       }
@@ -92,7 +92,7 @@
       align-self: flex-end
       }
 
-      #pond {
+17- #pond {
         display: flex;
         align-items: flex-start;
       }
@@ -101,43 +101,43 @@
       align-self: flex-end;
       }
 
-      #pond {
-        display: flex;
+18- #pond {
+      display: flex;
       flex-wrap: wrap;
       }
 
-      #pond {
-        display: flex;
+19- #pond {
+      display: flex;
       flex-direction: column;
       flex-wrap: wrap;
       }
 
-      #pond {
-        display: flex;
+20- #pond {
+      display: flex;
       flex-flow: column wrap;
       }
 
-      #pond {
-        display: flex;
-        flex-wrap: wrap;
+21- #pond {
+      display: flex;
+      flex-wrap: wrap;
       align-content: flex-start;
       }
 
-      #pond {
-        display: flex;
-        flex-wrap: wrap;
+22- #pond {
+      display: flex;
+      flex-wrap: wrap;
       align-content: flex-end;
       }
 
-      #pond {
-        display: flex;
-        flex-wrap: wrap;
+23- #pond {
+      display: flex;
+      flex-wrap: wrap;
       flex-direction: column-reverse;
       align-content: center;
       }
 
-      #pond {
-        display: flex;
+24- #pond {
+      display: flex;
       flex-flow: column-reverse wrap-reverse;
       justify-content: center;
       align-content: space-between;
