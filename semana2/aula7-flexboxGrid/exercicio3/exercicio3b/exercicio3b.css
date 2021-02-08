@@ -7,30 +7,55 @@ body {
     color: white;
 }
 
+#top-container{
+    display: grid;
+    grid-template-columns: 350px 950px;
+    text-align:center;
+    line-height: 7;
+}
 .green-background {
     background-color: green;
+    height: 65px;
 }
 
 .yellow-background {
     background-color: yellow;
+    height: 65px;
 }
 
 .pink-background {
     background-color: fuchsia;
+    height: 60vh;
+    text-align: center;
+    line-height: 45;
 }
 
+#middle-container{
+    display: grid;
+    grid-template-columns: 3fr 1fr 2fr;
+    text-align: center;
+}
 .blue-background {
     background-color: blue;
+    height: 150px;
+    line-height: 16;
 }
 
 .red-background {
     background-color: red;
+    height: 75px;
+    line-height: 8;
 }
 
 .lightgreen-background {
     background-color: lightgreen;
+    height: 75px;
+    line-height: 8;
 }
 
 .purple-background {
     background-color: purple;
+    text-align:center;
+    height: 60px;
+    line-height: 7;
 }
