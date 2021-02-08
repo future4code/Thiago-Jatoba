@@ -14,15 +14,15 @@
         <div class="line"></div>
         <div class="menu">
             <div class="menu-right">
-                <a href="#"><img src="assets/img/dev_logo.png" alt="dev_logo"></a>
+                <img src="assets/img/dev_logo.png" alt="dev_logo">
             </div>
             <div class="menu-left">
                 <nav>
                     <ul>
-                        <li class="active"><a href="./index.html">Home</a></li>
-                        <li><a href="#">Galeria de Projetos</a></li>
-                        <li><a href="#">Competências e Habilidades</a></li>
-                        <li><a href="#">Contato</a></li>
+                        <li class="active"><a href="./home.html">Home</a></li>
+                        <li><a href="./galeria-projetos.html">Galeria de Projetos</a></li>
+                        <li><a href="./competencias-habilidades.html">Competências e Habilidades</a></li>
+                        <li><a href="./contato.html">Contato</a></li>
                     </ul> 
                 </nav>
             </div>
@@ -32,19 +32,54 @@
         <form action="#">
             <div>
                 <label for="name">Nome: </label>
-                <input type="text" id="guest-user" name="guest">
+                <input type="text" id="name" name="guest">
             </div>
             <div>
                 <label for="email">E-mail: </label>
-                <input type="email" id="guest-user" name="guest-email">
+                <input type="email" id="email" name="guest-email">
             </div>
             <div>
                 <label for="ocupacao">Ocupação: </label>
-                <input type="text" id="ocuppation" name="work">
+                <input type="text" id="ocupacao" name="work">
             </div>
             <div>
-                <label for="descricao">Escreva sua Mensagem: </label>
-                <textarea name="caracteristica" id="informações técnicas"></textarea>
+                <label for="estados-brasil">Selecione seu Estado: </label>
+                <select name="estado" id="estados-brasil">
+                    
+                    <option value="" selected></option>
+                    <option value="">Acre</option>
+                    <option value="">Alagoas</option>
+                    <option value="">Amapá </option>
+                    <option value="">Amazonas</option>
+                    <option value="">Bahia</option>
+                    <option value="">Ceará</option>
+                    <option value="">Distrito Federal</option>
+                    <option value="">Espírito Santo</option>
+                    <option value="">Goiás</option>
+                    <option value="">Maranhão</option>
+                    <option value="">Mato Grosso</option>
+                    <option value="">Mato Grosso do Sul</option>
+                    <option value="">Minas Gerais</option>
+                    <option value="">Pará</option>
+                    <option value="">Paraíba</option>
+                    <option value="">Paraná</option>
+                    <option value="">Pernambuco</option>
+                    <option value="">Piauí</option>
+                    <option value="">Rio de Janeiro</option>
+                    <option value="">Rio Grande do Norte</option>
+                    <option value="">Rio Grande do Sul</option>
+                    <option value="">Rondônia</option>
+                    <option value="">Roraima </option>
+                    <option value="">Santa Catarina</option>
+                    <option value="">São Paulo </option>
+                    <option value="">Sergipe</option>
+                    <option value="">Tocantins</option>
+                    <option value="">Outro País</option>
+                </select>
+            </div>
+            <div>
+                <label for="corpo-email">Escreva sua Mensagem: </label>
+                <textarea name="caracteristica" id="corpo-email"></textarea>
             </div>
     
             <div>
