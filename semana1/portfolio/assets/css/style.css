@@ -1,0 +1,204 @@
+* {
+    font-family: 'ABeeZee', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+}
+
+header .line{
+    background-color: #F10C45;
+    height: 10px;
+}
+
+.menu{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    background-color: #31668A;
+}
+
+.menu-right img{
+    height: 70px;
+    padding-left: 50px;
+}
+
+.menu-left ul, .menu li{
+    list-style: none;
+}
+
+.menu-left ul{
+    display: flex;
+}
+
+.menu-left li a{
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    color: #b6bfc4; 
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid #31668A;
+    font-family: 'Play', sans-serif;
+}
+
+.menu-left li a:hover, .menu .active a{
+    border-bottom: 5px solid #b6bfc4;
+    color: #F10C45;
+}
+
+section{
+    /*margin: 10px 5px 77px 5px;*/
+    display: flex;   
+}
+
+.container h1{
+    
+    font-size: 100pt;
+    font-weight: bold;
+    margin: 20px 20px 0 20px;
+    padding-left: 200px;
+}
+
+.container h2{
+    margin: 0px 20px;
+    padding-left: 200px;
+}
+
+span {
+    margin: 10px 20px 80px;
+    padding-left: 200px;
+    display: block;
+    text-align: justify;
+}
+
+
+.photo img{
+    margin: 40px 170px 30px 150px;
+    width: 400px;
+    border-radius: 200px;
+    border: 5px solid #31668A;  
+}
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    background-color: #b6bfc4;
+}
+
+footer p{
+    margin-left: 50px;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Play', sans-serif;
+}
+
+.socialmedia img{
+    height: 30px;
+    margin-left: 100px;
+    margin-right: 65px;
+}
+
+/* --ABA CONTATO-- */
+
+main form{
+    margin-left: 40px;
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+
+label {
+    display:block;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color: black;
+}
+input{
+    width: 400px;
+    outline: 0;
+}
+
+input[type=email], input[type=text]{
+    width: 600px;
+}
+
+textarea{
+    width: 800px;
+    height: 100px;
+    resize: horizontal;
+}
+
+.add-form{
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid black;
+    background-color: #F10C45;
+    font-size: 15px;
+    font-family: 'Play', sans-serif;
+    font-weight: bold;
+}
+
+.add-form:hover{
+    background-color: lightgrey
+}
+
+#text{
+    margin: inherit
+}
+
+/* --ABA GALERIA PROJETOS-- */
+
+.projetos-grid{
+    display: flex;
+    margin: 50px 100px;
+}
+
+.box1{
+ width: 410px;
+ margin: 150px 0;
+ padding: 0 30px;
+}
+
+/* --ABA COMPETÊNCIAS-- */
+.container2{
+    margin: 100px 5px 155px 5px;
+    display: flex;   
+}
+.container-box {
+    height: 300px;
+    display: flex;
+  }
+  .info1{
+    width: 50%;
+    padding: 5%;
+    background: red;
+    color: #fff;
+  }
+  .info2{
+    width: 50%;
+    padding: 5%;
+    background: red;
+    color: #fff;
+  }
+
+  .info3{
+    width: 50%;
+    padding: 5%;
+    background: red;
+    color: #fff;
+  }
+  .info4{
+    width: 50%;
+    padding: 5%;
+    background: red;
+    color: #fff;
+    border: 10px dashed #31668A;
+  }
