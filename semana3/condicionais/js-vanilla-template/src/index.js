@@ -123,172 +123,108 @@ if (genero === "fantasia" && preco === 15) {
 
 2.
 
-let nomeCompleto = prompt("Qual seu Nome Completo?")
-console.log(nomeCompleto)
+// DADOS INTERNOS APENAS PARA APURAÇÃO
 
-let tipoJogo = prompt("Qual tipo de Jogo (digite IN para Internacional e DO para doméstico?")
-    if (tipoJogo === "DO"){
-        let etapaCampeonato = prompt("Qual etapa do Campeonato? (digite SF, DT ou FI)")
-            if (etapaCampeonato === "SF"){
-                let categoria = Number(prompt("Qual a categoria? (digite 1, 2, 3 ou 4)"))
-                    switch (categoria){
-                        case 1:
-                            categoria = 1320.00
-                            console.log(1320.00);
-                            break;
-                        case 2:
-                            categoria = 880.00
-                            console.log(880.00);
-                            break;
-                        case 3:
-                            categoria = 550.00
-                            console.log(550.00);
-                            break;
-                        case 4:
-                            categoria = 220.00
-                            console.log(220.00);
-                            break;
-                    }
-                    let quantIngressos = Number(prompt("Qual a quantidade de ingressos?"))
-                    console.log (quantIngressos)
+    let nome = prompt("Digite seu nome:")
+    console.log (nome)
+    
+    let tipoJogo = prompt("Qual tipo de Jogo? (digite IN para Internacional e DO para doméstico)")
+    console.log (tipoJogo)
+    
+    let etapaJogo = prompt ("Qual etapa do Campeonato? (digite SF, DT ou FI)")
+    console.log (etapaJogo)
+    
+    let categoria = prompt ("Qual a categoria? (digite 1, 2, 3 ou 4)")
+    console.log (categoria)
+    
+    let quantIngressos = Number( prompt ("Qual a quantidade de ingressos?"))
 
-                    console.log("Valor do Ingresso: " + categoria.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}))
-                    console.log("Valor Total dos Ingressos: " + (quantIngressos * categoria).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}))
-            }
-            if (etapaCampeonato === "DT"){
-                let categoria = Number(prompt("Qual a categoria? (digite 1, 2, 3 ou 4)"))
-                    switch (categoria){
-                        case 1:
-                            categoria = 660.00
-                            console.log(660.00);
-                            break;
-                        case 2:
-                            categoria = 440.00
-                            console.log(440.00);
-                            break;
-                        case 3:
-                            categoria = 330.00
-                            console.log(330.00);
-                            break;
-                        case 4:
-                            categoria = 170.00
-                            console.log(170.00);
-                            break;
-                    }
-                    let quantIngressos = Number(prompt("Qual a quantidade de ingressos?"))
-                    console.log (quantIngressos)
+// DADOS IMPRESSOS
 
-                    console.log("Valor do Ingresso: " + categoria.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}))
-                    console.log("Valor Total dos Ingressos: " + (quantIngressos * categoria).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}))
+    console.log("---Dados da compra---")
 
-            if (etapaCampeonato === "FI"){
-                let categoria = Number(prompt("Qual a categoria? (digite 1, 2, 3 ou 4)"))
-                    switch (categoria){
-                        case 1:
-                            categoria = 1980.00
-                            console.log(1980.00);
-                            break;
-                        case 2:
-                            categoria = 1320.00
-                            console.log(1320.00);
-                            break;
-                        case 3:
-                            categoria = 880.00
-                            console.log(880.00);
-                            break;
-                        case 4:
-                            categoria = 330.00
-                            console.log(330.00);
-                            break;
-                    }
-                    let quantIngressos = Number(prompt("Qual a quantidade de ingressos?"))
-                    console.log (quantIngressos)
-
-                    console.log("Valor do Ingresso: " + categoria.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}))
-                    console.log("Valor Total dos Ingressos: " + (quantIngressos * categoria).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}))
-            }
-        }
-    }
+    console.log("Nome do cliente:", nome)
 
     if (tipoJogo === "IN"){
-        let etapaCampeonato = prompt("Qual etapa do Campeonato? (digite SF, DT ou FI)")
-            if (etapaCampeonato === "SF"){
-                let categoria = Number(prompt("Qual a categoria? (digite 1, 2, 3 ou 4)"))
-                    switch (categoria){
-                        case 1:
-                            categoria = 1320.00
-                            console.log(1320.00);
-                            break;
-                        case 2:
-                            categoria = 880.00
-                            console.log(880.00);
-                            break;
-                        case 3:
-                            categoria = 550.00
-                            console.log(550.00);
-                            break;
-                        case 4:
-                            categoria = 220.00
-                            console.log(220.00);
-                            break;
-                    }
-                    let quantIngressos = Number(prompt("Qual a quantidade de ingressos?"))
-                    console.log (quantIngressos)
+        console.log("Jogo Internacional")
 
-                    console.log("Valor do Ingresso: " + categoria.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'}))
-                    console.log("Valor Total dos Ingressos: " + (quantIngressos * categoria).toLocaleString('pt-BR', {style: 'currency', currency: 'USD'}))
-            }
-            if (etapaCampeonato === "DT"){
-                let categoria = Number(prompt("Qual a categoria? (digite 1, 2, 3 ou 4)"))
-                    switch (categoria){
-                        case 1:
-                            categoria = 660.00
-                            console.log(660.00);
-                            break;
-                        case 2:
-                            categoria = 440.00
-                            console.log(440.00);
-                            break;
-                        case 3:
-                            categoria = 330.00
-                            console.log(330.00);
-                            break;
-                        case 4:
-                            categoria = 170.00
-                            console.log(170.00);
-                            break;
-                    }
-                    let quantIngressos = Number(prompt("Qual a quantidade de ingressos?"))
-                    console.log (quantIngressos)
+        } else if (tipoJogo === "DO"){
+            console.log("Jogo Doméstico")
 
-                    console.log("Valor do Ingresso: " + categoria.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'}))
-                    console.log("Valor Total dos Ingressos: " + (quantIngressos * categoria).toLocaleString('pt-BR', {style: 'currency', currency: 'USD'}))
-
-            if (etapaCampeonato === "FI"){
-                let categoria = Number(prompt("Qual a categoria? (digite 1, 2, 3 ou 4)"))
-                    switch (categoria){
-                        case 1:
-                            categoria = 1980.00
-                            console.log(1980.00);
-                            break;
-                        case 2:
-                            categoria = 1320.00
-                            console.log(1320.00);
-                            break;
-                        case 3:
-                            categoria = 880.00
-                            console.log(880.00);
-                            break;
-                        case 4:
-                            categoria = 330.00
-                            console.log(330.00);
-                            break;
-                    }
-                    let quantIngressos = Number(prompt("Qual a quantidade de ingressos?"))
-                    console.log (quantIngressos)
-
-                    console.log("Valor do Ingresso: " + categoria.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'}))
-                    console.log("Valor Total dos Ingressos: " + (quantIngressos * categoria).toLocaleString('pt-BR', {style: 'currency', currency: 'USD'}))
-            }
+        } else {
+            console.log("** DADOS INVÁLIDOS ** Ingresso Não Gerado")
         }
+    if (etapaJogo == "SF"){
+        console.log("Semi-Final")
+
+        } else if (etapaJogo === "DT"){
+        console.log("Decisão Terceiro Lugar")
+
+        } else if (etapaJogo == "FI" ){
+        console.log("Final")
+
+        } else {
+            console.log("** DADOS INVÁLIDOS ** Ingresso Não Gerado")
+        }
+
+    console.log("Categoria:", categoria)
+
+    console.log("Quantidade de Ingressos:", quantIngressos)
+
+    console.log("---Valores---")
+    
+    switch (etapaJogo && categoria){ 
+        case "SF" && "1":
+            valor = 1320.00
+            break
+        case "SF" && "2":
+            valor = 880.00
+            break
+        case "SF" && "3":
+            valor = 550.00
+            break
+        case "SF" && "4":
+            valor = 220
+            break
+        case "DT" && "1":
+            valor = 660
+            break
+        case "DT" && "2":
+            valor = 440
+            break
+        case "DT" && "3":
+            valor = 330
+            break
+        case "DT" && "4":
+            valor = 170
+            break
+        case "FI" && "1":
+            valor = 1980
+            break
+        case "FI" && "2":
+            valor = 1320
+            break
+        case "FI" && "3":
+            valor = 880
+            break
+        case "FI" && "4":
+            valor = 330
+            break
+        default:
+            valor = String(0) // Não entendo pq esse valor não pega (??)
     }
+
+// RESULTADOS
+    if (tipoJogo === "IN"){
+        let dollar = valor/4.10
+        console.log("Valor do Ingresso:" + dollar.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'}))
+        console.log("Valor total: " + (dollar * quantIngressos).toLocaleString('pt-BR', {style: 'currency', currency: 'USD'}))
+
+    }else {
+        console.log("Valor do Ingresso: R$ " + valor.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}))
+        console.log("Valor total: R$ " + (valor * quantIngressos).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}))
+    }
+    
+    
+    
+    
