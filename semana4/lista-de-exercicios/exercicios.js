@@ -8,19 +8,24 @@ function inverteArray(array) {
 }
 
 //Exercício 2
+
 function retornaNumerosParesElevadosADois (array) {
    // implemente sua lógica aqui
-   for(let i = 0; i < array.length; i++)
-      if( i % 2 === 0){
-         array.push(array[i] ** 2)
+   const novoArray = []
+   for(let i = 0; i < array.length; i++){
+      if(array[i] % 2 === 0){
+         novoArray.push(array[i] ** 2)
+         console.log(novoArray)
       }
-      return array
-      
+   } 
+   return novoArray
 }
+
 //Exercício 3
 
 function retornaNumerosPares (array) {
    // implemente sua lógica aqui
+   
 }
 
 //Exercício 4
