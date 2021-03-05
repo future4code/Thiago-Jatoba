@@ -36,7 +36,7 @@ function imprimirExtrato(){
         
         if(item.tipo === 'alimentação'){
             gastoAlimentacao += item.valor
-            } else if (item.tipo === 'utilidade'){
+            } else if (item.tipo === 'utilidades'){
             gastoUtilidades += item.valor
             } else {
                 gastoViagem += item.valor
