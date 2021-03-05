@@ -32,13 +32,15 @@ function imprimirExtrato(){
     // AQUI VEM A IMPLEMENTAÇÃO
 
     arrDespesas.map((item) => {
-        if(item !== ''){
         gastoTotal += item.valor
-        gastoAlimentacao += item.tipo
-        gastoUtilidades += item.tipo
-        gastoViagem += item.tipo
-        console.log (despesas)
-        }
+        
+        if(item.tipo === 'alimentação'){
+            gastoAlimentacao += item.valor
+            } else if (item.tipo === 'utilidade'){
+            gastoUtilidades += item.valor
+            } else {
+                gastoViagem += item.valor
+            }
     })
 
     divExtrato.innerHTML = `<p>Extrato: Gasto Total: R$${gastoTotal} | Alimentação: R$${gastoAlimentacao} | 
