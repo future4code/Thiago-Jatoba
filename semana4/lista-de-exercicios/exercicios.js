@@ -35,44 +35,91 @@ function retornaNumerosPares (array) {
    return novoArray
 }
 
-
 //Exercício 4
 
 function retornaMaiorNumero(array) {
    // implemente sua lógica aqui
+   let maiorNumero = [0]
+      for (let i = 0; i < array.length; i++){
+         if (array[i] > maiorNumero){
+            maiorNumero = array[i]
+            console.log(maiorNumero)
+         }
+      }
+      return maiorNumero 
 }
 
 //Exercício 5
 
 function retornaQuantidadeElementos (array) {
    // implemente sua lógica aqui
-}
-
+   for (let i = 0; i < array.length; i++){
+      console.log (array)
+      return array.length
+   }
+} 
 //Exercício 6
 
 function retornaExpressoesBooleanas() {
    // implemente sua lógica aqui
-}
-
+   const resposta = [false, false, true, true, true]
+   
+   return resposta
+} 
 //Exercício 7
 
 function retornaNNumerosPares(n) {
    // implemente sua lógica aqui
+   let novoArray = []
+   for(let i = 0; i < n; i++){
+         novoArray.push(i * 2)
+   }  
+   return novoArray
 }
 
 // Exercício 8
 
 function checaTriangulo(a, b, c) {
   // implemente sua lógica aqui
+   if (a === b && b === c){
+      return "Equilátero"
+   } else if (a === b || b === c || c === a){
+      return "Isósceles"
+   } else {
+      return "Escaleno"
+   }
 }
 
 // Exercício 9
 
 function comparaDoisNumeros(num1, num2) {
    // implemente sua lógica aqui
+   let resultado = {
+      maiorNumero:'',
+      maiorDivisivelporMenor:'',
+      diferenca: ''
+   }
+      if (num1 > num2){
+         resultado.maiorNumero = num1
+         if (resultado.maiorNumero % 2 === 0){
+            resultado.maiorDivisivelporMenor = true
+         }else {
+            resultado.maiorDivisivelporMenor = false
+         }
+            resultado.diferenca = resultado.maiorNumero - num2
+      } else {
+         resultado.maiorNumero = num2
+         if (resultado.maiorNumero % 2 === 0){
+            resultado.maiorDivisivelporMenor = true
+         }else {
+            resultado.maiorDivisivelporMenor = false
+         }
+            resultado.diferenca = resultado.maiorNumero - num1
+      }
+      return resultado    
 }
 
-// Exercício 10
+//Exercício 10
 
 function segundoMaiorEMenor(array) {
    // implemente sua lógica aqui
@@ -82,18 +129,47 @@ function segundoMaiorEMenor(array) {
 
 function ordenaArray(array) {
    // implemente sua lógica aqui
+
 }
 
 // Exercício 12
 
 function filmeFavorito() {
    // implemente sua lógica aqui
+   const filme = {
+      nome: "Domicilío Conjugal",
+      ano: 1970,
+      diretor: "François Truffaut",
+      atores: "Jean-Pierre Léaud, Claude Jade, Daniel Ceccaldi"
+   }
+   console.log(filme)
+   return filme
 }
 
 // Exercício 13
 
 function imprimeChamada() {
    // implemente sua lógica aqui
+   const filme = {
+      nome: "Domicilío Conjugal",
+      ano: 1970,
+      diretor: "François Truffaut",
+      atores: "Jean-Pierre Léaud, Claude Jade, Daniel Ceccaldi"
+   }
+
+   // filme.forEach((estrelando) => {
+   //    for(leti = 0; i < filme.atores.length; i++) {
+   //       if(i === filme.atores.length - 1) {
+   //          estrelando += filme.atores[i]
+   //       } else {
+   //          estrelando += filme.atores[i] + ", "
+   //       }
+   //    } 
+   // })
+   
+   //filme = `Venha assistir ao filme ${filme.nome}, lançado em ${filme.ano}, dirigido por ${filme.diretor} e estrelado por ${estrelando}.`
+
+   return filme
 }
 
 // Exercício 14
@@ -160,28 +236,53 @@ const pessoas = [
 
 //Exercício 18, letra A
 
-function retornaPessoasAutorizadas(pessoas) {
+function retornaPessoasAutorizadas() {
    // implemente sua lógica aqui
 }
 
 
 // Exercício 18, letra B
 
-function retornaPessoasNaoAutorizadas(pessoas) {
+function retornaPessoasNaoAutorizadas() {
    // implemente sua lógica aqui
 }
 
 //Exercício 19
 
 const consultas = [
-  { nome: "João", genero: "masculino", cancelada: true, dataDaConsulta: "01/10/2019" },
-  { nome: "Pedro", genero: "masculino", cancelada: false, dataDaConsulta: "02/10/2019" },
-  { nome: "Paula", genero: "feminino", cancelada: true, dataDaConsulta: "03/11/2019" },
-  { nome: "Márcia", genero: "feminino", cancelada: false, dataDaConsulta: "04/11/2019" }
-  ]
+   { nome: "João", genero: "masculino", cancelada: false, dataDaConsulta: "01/10/2019" },
+   { nome: "Pedro", genero: "masculino", cancelada: true, dataDaConsulta: "02/10/2019" },
+   { nome: "Paula", genero: "feminino", cancelada: false, dataDaConsulta: "03/11/2019" },
+   { nome: "Márcia", genero: "feminino", cancelada: true, dataDaConsulta: "04/11/2019" }
+]
 
-function retornaEmailConsulta(consultas) {
+function retornaEmailConsulta() {
   // implemente sua lógica aqui
+   let email
+   
+   let emailRetorno = consultas.map((paciente) =>{
+      let tratamento
+      let pronome
+      if (paciente.genero === "masculino") {
+         tratamento = "Sr."
+         pronome = "lo"
+      } else{
+         tratamento = "Sra."
+         pronome = "la"
+      }
+
+      if(paciente.cancelada === false){
+         email = `Olá, ${tratamento} ${paciente.nome}. Estamos enviando esta mensagem para lembrá-${pronome} da sua consulta no dia ${paciente.dataDaConsulta}. Por favor, acuse o recebimento deste e-mail.`
+         console.log(email)
+         return email
+      } else {
+         email = `Olá, ${tratamento} ${paciente.nome}. Infelizmente, sua consulta marcada para o dia ${paciente.dataDaConsulta} foi cancelada. Se quiser, pode entrar em contato conosco para remarcá-la`
+         console.log(email)
+         return email
+      }
+   })
+   
+   return emailRetorno
 }
 
 //Exercício 20
@@ -197,4 +298,12 @@ const contas = [
 
 function atualizaSaldo() {
   // implemente sua lógica aqui
+   contas.forEach((pessoa) => {
+      let gastos = 0
+      for (i of pessoa.compras){
+         gastos += i
+      }
+      pessoa.saldoTotal -= gastos
+   })
+   return contas
 }
