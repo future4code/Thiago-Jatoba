@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import CardPequeno from './components/CardPequeno/CardPequeno'
 import CardGrande from './components/CardGrande/CardGrande';
+import FormacaoAcademica from './components/FormacaoAcademica/FormacaoAcademica';
 import ImagemButton from './components/ImagemButton/ImagemButton';
 
 function App() {
@@ -47,6 +48,21 @@ function App() {
           imagem="https://i.pinimg.com/280x280_RS/1f/c1/e7/1fc1e715f091cce11802ca635682fb32.jpg" 
           nome="MinD Designs Comércio de Utilidades Domésticas LTDA" 
           descricao="Gerência do PDV (Filial RJ), Controle de Operações de Projetos com IDs e Arquitetos Parceiros, Controle de Requisição de Estoque, Materiais e Insumos (loja física e e-commerce)." 
+        />
+      </div>
+      
+      <div className="page-section-container">
+        <h2>Formação Acadêmica</h2>
+        <FormacaoAcademica 
+          imagem="https://media-exp1.licdn.com/dms/image/C560BAQGXX-pQE9ZghQ/company-logo_200_200/0/1588617268603?e=2159024400&v=beta&t=a88brKeePgoXCa0PpjouqjPLfp25RQso7CCWfbvQ9qg" 
+          nome="Labenu" 
+          descricao="Bolsista Integral de Desenvolvimento em Tecnologia no Programa Desenvolve, do Grupo Boticário, com foco em Web Full Stack." 
+        />
+        
+        <FormacaoAcademica 
+          imagem="https://images.squarespace-cdn.com/content/52a23eaae4b0a695ee3d229c/1401390137484-HMF7WMBOO5OHLOJ840O0/1970489_10152089052754843_756188350_n.png?content-type=image%2Fpng" 
+          nome="FGV - Rio" 
+          descricao="MBA em Gestão do Entretenimento e Economia Criativa." 
         />
       </div>
 
