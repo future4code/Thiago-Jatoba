@@ -13,7 +13,7 @@ export default class Step3 extends React.Component {
         return(
         <DivConatiner>
         <h1>ETAPA 3 - DADOS:</h1>
-            <label for="justify">7. Por que você não terminou um curso de graduação</label><br/>
+            <label for="justify">7. Por que você não terminou um curso de graduação?</label><br/>
             <input type="text" id="justify" name="justify"/><br/>
 
             <label for="complement">8. Você fez algum curso complementar?</label><br/>
