@@ -25,27 +25,28 @@ export default class GetActivity extends React.Component{
 
     render() {
         const activitiesList = this.state.activity.map((activity) => (
-            <div key={activity.key}>
-                <div>
-                    <h3>Activity: </h3>
-                    <p> {activity.activity} </p>
+                <div key={activity.key}>
+                    <div>
+                        <h3>Activity: </h3>
+                        <p> {activity.activity} </p>
+                    </div>
+                    <div>
+                        <h2>Number of Participants: </h2>
+                        <p> {activity.participants} </p>
+                    </div>
+                    <div>
+                        <h2>Type: </h2>
+                        <p> {activity.type} </p>
+                    </div>
                 </div>
-                <div>
-                    <h2>Number of Participants: </h2>
-                    <p> {activity.participants} </p>
-                </div>
-                <div>
-                    <h2>Type: </h2>
-                    <p> {activity.type} </p>
-                </div>
-            </div>
-        ));
+            )
+        )
 
         if (this.state.activity.length === 0) {
             return (
                 <div>
                     <h1>BORED?</h1>
-                    <button onClick={this.getActivity}>"C'mon and random an Activity!" </button>
+                    <button onClick={this.choosedActivity}>"C'mon and random an Activity!" </button>
                 </div>
             );
         } else if (this.state.activity.length !== 0) {
