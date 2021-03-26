@@ -24,22 +24,21 @@ export default class GetActivity extends React.Component{
     }
 
     render() {
-        const activitiesList = this.state.activity.map((activity) => (
-                <div key={activity.key}>
+        const activitiesList =(
+                <div key={this.state.activity.key}>
                     <div>
                         <h3>Activity: </h3>
-                        <p> {activity.activity} </p>
+                        <p> {this.state.activity.activity} </p>
                     </div>
                     <div>
                         <h2>Number of Participants: </h2>
-                        <p> {activity.participants} </p>
+                        <p> {this.state.activity.participants} </p>
                     </div>
                     <div>
                         <h2>Type: </h2>
-                        <p> {activity.type} </p>
+                        <p> {this.state.activity.type} </p>
                     </div>
                 </div>
-            )
         )
 
         if (this.state.activity.length === 0) {
