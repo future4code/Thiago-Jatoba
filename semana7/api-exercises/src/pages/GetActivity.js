@@ -5,10 +5,8 @@ import axios from 'axios'
 export default class GetActivity extends React.Component{
 
     state = {
-        activity: { }
+        activity: []
     }
-
-
 
     choosedActivity = async () => {
         try{
@@ -17,19 +15,49 @@ export default class GetActivity extends React.Component{
             this.setState({activity: res.data})
         }catch (err){
             console.log(err)
-
-
         }
-
+        
     }
-    
-    render (){
-        return(
-            <div>
-                <button onClick={this.choosedActivity}>Tcharaaaaammmm!</button>
-                <label>Your Chosen Activity:</label>
-                <h3>{this.state.activity.activity}</h3>
+
+    backHome = () => {
+        this.setState({ activity: [] });
+    }
+
+    render() {
+        const activitiesList = this.state.activity.map((activity) => (
+            <div key={activity.key}>
+                <div>
+                    <h3>Activity: </h3>
+                    <p> {activity.activity} </p>
+                </div>
+                <div>
+                    <h2>Number of Participants: </h2>
+                    <p> {activity.participants} </p>
+                </div>
+                <div>
+                    <h2>Type: </h2>
+                    <p> {activity.type} </p>
+                </div>
             </div>
-        )
+        ));
+
+        if (this.state.activity.length === 0) {
+            return (
+                <div>
+                    <h1>BORED?</h1>
+                    <button onClick={this.getActivity}>"C'mon and random an Activity!" </button>
+                </div>
+            );
+        } else if (this.state.activity.length !== 0) {
+            return (
+                <div>
+                    <div>{activitiesList}</div>
+                    <div>
+                        <button onClick={this.backHome}>BACK to HOME</button>
+                        <button onClick={this.choosedActivity}>GIVE ME ANOTHER ONE!</button>
+                    </div>
+                </div>
+            );
+        }
     }
 }
