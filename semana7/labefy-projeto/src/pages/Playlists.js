@@ -1,32 +1,63 @@
 import React from 'react'
 import axios from 'axios'
 import {baseUrl, axiosConfig} from '../Parameters'
+import styled from 'styled-components'
 
+const MainContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    width: 450px;
+    height: 200px;
+    background-color: #1ED760 ;
+`
+const PlaylistsList = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+`
+const PlaylistItem = styled.div`
+    display:flex;
+    padding: 10px;
+`
+const DeleteButton = styled.button`
+    margin-left: 5px;
+`
+
+const Title = styled.h1`
+    color: white;
+`
 export default class Playlists extends React.Component{
     state = {
-        users: []
+        playlists: []
     }
 
     componentDidMount(){
-        this.getAllUsers()
+        this.getAllPlaylists()
     }
 
-    getAllUsers = async () => {
+    getAllPlaylists = async () => {
         try{
             const response = await axios.get(baseUrl, axiosConfig)
-            this.setState({users: response.data.result.list})
+            this.setState({playlists: response.data.result.list})
         }catch (error){
             console.log(error)
         }
     }
 
-    deleteUsers = async (userId) => {
-        if (window.confirm('Deseja realmente deletar o usuário')){          
+    deletePlaylist = async (playlistId) => {
+        if (window.confirm('Deseja realmente deletar a playlist')){          
             try{
 
-                await axios.delete(`${baseUrl}/${userId}`, axiosConfig)
-                this.getAllUsers()
-                console.log(userId)
+                await axios.delete(`${baseUrl}/${playlistId}`, axiosConfig)
+                this.getAllPlaylists()
+                console.log(playlistId)
             }catch (error){
                 console.log(error)
             }
@@ -35,17 +66,17 @@ export default class Playlists extends React.Component{
 
     render(){
         return(
-            <div>
-                <h2>PLAYLISTS</h2>
-                {this.state.users.map((user) => {
+            <MainContainer>
+                <Title>PLAYLISTS</Title>
+                {this.state.playlists.map((playlist) => {
             return (
-                <div key={user.id}>
-                    <p>{user.name}</p>
-                    <button onClick={() => {this.deleteUsers(user.id)}}>Remover</button>
-                </div>
+                <PlaylistsList key={playlist.id}>
+                    <PlaylistItem>{playlist.name}</PlaylistItem>
+                    <DeleteButton onClick={() => {this.deletePlaylist(playlist.id)}}>Remover</DeleteButton>
+                </PlaylistsList>
             )
         })}
-            </div>
+            </MainContainer>
         )
     }
 } 
