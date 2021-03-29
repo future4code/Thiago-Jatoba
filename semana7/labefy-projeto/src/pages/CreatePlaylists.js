@@ -47,15 +47,15 @@ export default class CreatePlaylists extends React.Component{
     }
 
     handlePlaylist = (e) => {
-        this.setState({playlist: e.target.value})
+        this.setState({myPlaylist: e.target.value})
     };
 
     createPlaylist = async () => {
         const body = {
-            playlist: this.state.myplaylist,
+            playlist: this.state.myPlaylist
         }
         try{
-            await axios.post(baseUrl, body, axiosConfig)
+            await axios.post (baseUrl, body, axiosConfig)
             this.setState({myPlaylist:''})
             alert("Playlist Criada com Sucesso!")
         }catch(error){
