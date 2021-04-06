@@ -77,7 +77,6 @@ export default class App extends React.Component {
           Made by ME!
         </Footer>
       </DivContainer>
-      
     );
   }
 }
