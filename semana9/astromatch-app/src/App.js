@@ -2,6 +2,14 @@ import React, {useState} from 'react'
 import axios from 'axios'
 import Likes from './pages/Likes'
 import Matches from './pages/Matches'
+import styled from 'styled-components'
+
+const DivRender = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin: 10px;`
 
 function App() {
   const [currentPage, setCurrentPage] = useState('likes')
@@ -34,11 +42,10 @@ function App() {
   }
 
   return (
-    <div>
+    <DivRender>
       <button onClick={cleanPage}>Limpar Matches</button>
       {renderPage()}
-      
-    </div>
+    </DivRender>
   );
 }
 
