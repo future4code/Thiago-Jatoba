@@ -1,10 +1,14 @@
 import axios from 'axios'
-import {useEffect} from 'react'
+import {useEffect, useState} from 'react'
 import {useHistory} from 'react-router-dom'
+import useProtectedPage from '../hooks/useProtectedPage'
 import {goToAdminHomePage} from '../routes/coordinator'
 
 function TripDetailPage() {
     const history = useHistory()
+    useProtectedPage()
+    
+    const [trip, setTrip] = useState({})
 
     useEffect(() => {
         getTripDetail()
@@ -19,7 +23,7 @@ function TripDetailPage() {
                     auth: token
                 }
             })
-            console.log(res)
+            setTrip(res.data.trip)
         }catch(error){
             console.log(error)
         }

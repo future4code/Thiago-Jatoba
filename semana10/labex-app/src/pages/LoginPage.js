@@ -26,6 +26,7 @@ function LoginPage() {
             console.log(res.data)
             goToAdminHomePage(history)
             window.localStorage.setItem('token', res.data.token)
+            window.localStorage.setItem('user', JSON.stringify(res.data.user))
         }catch(error){
             console.log(error)
         }
