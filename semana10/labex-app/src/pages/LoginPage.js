@@ -1,10 +1,12 @@
-import { useState } from "react";
-import { useHistory } from "react-router";
+import { useState } from "react"
+import { useHistory } from "react-router"
+import useProtectedPage from '../hooks/useProtectedPage'
 import axios from 'axios'
 import {goToHomePage, goToAdminHomePage} from '../routes/coordinator'
 
 function LoginPage() {
     const history = useHistory()
+    useProtectedPage()
     const [usermail, setUserMail] = useState('')
     const [password, setPassword] = useState('')
 
