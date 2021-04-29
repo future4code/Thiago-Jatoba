@@ -1,10 +1,15 @@
 import React from 'react'
+import { ScreenContainer, SignUpTitle } from './styled'
+import SignUpForm from './SignUpForm'
+import useUnportectedPage from '../../hooks/useUnprotectedPage'
 
-const SignUp = () => {
+const SignUp = ({setLoginButtonText}) => {
+    useUnportectedPage()
     return(
-        <div>
-            <h1>SignUp</h1>
-        </div>
+        <ScreenContainer>
+            <SignUpTitle>CADASTRE-SE</SignUpTitle>
+            <SignUpForm setLoginButtonText={setLoginButtonText}/>
+        </ScreenContainer>
     )
 }
 

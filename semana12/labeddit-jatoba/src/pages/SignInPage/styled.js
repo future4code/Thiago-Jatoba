@@ -7,15 +7,6 @@ export const ScreenContainer = styled.div`
     width: 100vw;
     margin-top: 20vh;
 `
-
-export const InputsContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    width: 80vw;
-    max-width: 400px;
-    align-items:center;
-    margin-bottom:30px;
-`
 export const LogInTitle = styled.h3`
     font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
     word-spacing: 25px;
@@ -25,6 +16,19 @@ export const LogInTitle = styled.h3`
     @media screen and (min-width: 300px) and (max-width: 420px) {
         word-spacing: 10px;
         letter-spacing: 5px;
+    }
+`
+
+export const InputsContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    max-width: 400px;
+    align-items:center;
+    margin-bottom:30px;
+
+    Button{
+        margin-top: 30px;
     }
 `
 

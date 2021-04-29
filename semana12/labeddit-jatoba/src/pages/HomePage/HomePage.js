@@ -1,10 +1,18 @@
 import React from 'react'
-import { Button } from '@material-ui/core'
+import { BASE_URL } from '../../constants/url'
+import useProtectedPage from '../../hooks/useProtectedPage'
+import useRequesteData from '../../hooks/useRequestData'
+
 const HomePage = () => {
+    useProtectedPage()
+    const post = useRequesteData([], `${BASE_URL}/posts`)
+    console.log(post)
+
+    
     return (
         <div>
             <h1>HomePage</h1>
-            <Button variant='contained' color='primary'>Primary</Button>
+            
         </div>
     )
 }

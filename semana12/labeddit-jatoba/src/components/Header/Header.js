@@ -7,15 +7,30 @@ import { goToHomePage, goToSignInPage}  from '../../routes/coordinator'
 import { useHistory } from 'react-router-dom'
 
 
-const Header = () => {
+const Header = ({loginButtonText, setLoginButtonText}) => {
   const history = useHistory()
+  const token = localStorage.getItem('token')
+  const logOut = () =>{
+    localStorage.removeItem('token')
+  }
+
+  const loginButtonAction = () => {
+    if (token){
+      logOut()
+      setLoginButtonText('Login')
+      goToSignInPage(history)
+    } else {
+      goToSignInPage(history)
+    }
+  }
+
   return (
       <AppBar position="static">
         <StyledToolbar>
           <Button onClick = {() => goToHomePage(history)}>
             <LogoImg src={Logo} alt='labeddit_logo' />
           </Button>
-          <Button color="inherit" onClick={() => goToSignInPage(history)}>Login</Button>
+          <Button color="inherit" onClick={loginButtonAction}>{loginButtonText}</Button>
         </StyledToolbar>
       </AppBar>
   );
