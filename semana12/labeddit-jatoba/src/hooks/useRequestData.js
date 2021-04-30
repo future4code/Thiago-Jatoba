@@ -11,8 +11,7 @@ const useRequesteData = (initialData, url) =>{
             }
         })
         .then((res) => {
-            console.log(res.data)
-            setData(res.data)
+            setData(res.data.posts)
         })
         .catch((err) => {
             console.log(err)
