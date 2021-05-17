@@ -13,13 +13,15 @@ import { PostContainer, AddPostButton } from './styled'
 const HomePage = () => {
     useProtectedPage()
     const history = useHistory()
-    const post = useRequesteData([], `${BASE_URL}/posts`)
+    const post = useRequesteData([], `${BASE_URL}/posts`).posts
 
     const onClickPost = (id) =>{
         goToPostDetailPage(history, id)
     }
 
-    const postList = post.map((post) => {
+    return (
+        <PostContainer>
+            {post && post.map((post) => {
         return (
         <CardActionArea
             variant='outlined'
@@ -37,10 +39,7 @@ const HomePage = () => {
             </Typography>
         </CardActionArea>
         )
-    })
-    return (
-        <PostContainer>
-            {postList}
+    })}
             <AddPostButton
                 color={'primary'}
                 onClick={() => goToAddPostPage(history)}

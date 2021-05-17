@@ -6,9 +6,10 @@ import useRequesteData from '../../hooks/useRequestData'
 
 const PostDetail = () => {
     useProtectedPage()
-    const params = useParams()
-    const detail = useRequesteData({}, `${BASE_URL}/posts/${params.id}`)
+    const params = useParams().id
+    const detail = useRequesteData({}, `${BASE_URL}/posts/${params}`).post
     console.log(detail)
+    console.log(params)
 
     return (
         <div>

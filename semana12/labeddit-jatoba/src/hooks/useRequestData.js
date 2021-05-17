@@ -11,11 +11,11 @@ const useRequesteData = (initialData, url) =>{
             }
         })
         .then((res) => {
-            setData(res.data.posts)
+            setData(res.data)
         })
         .catch((err) => {
             console.log(err)
-            alert('Algo errado Não está Certo!')
+            alert(err.response.data.message)
         })
     }, [url])
 
