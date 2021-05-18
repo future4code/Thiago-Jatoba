@@ -106,3 +106,6 @@ build/
 
 #.DS files MacOs
 .DS_Store
+
+#NodeModules
+node_modules/
