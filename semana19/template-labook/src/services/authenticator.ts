@@ -1,8 +1,5 @@
 import * as jwt from "jsonwebtoken"
-
-export type authenticationData = {
-    id: string,
-}
+import { authenticationData } from "../model/user"
 
 function generateToken(
     payload: authenticationData
@@ -15,3 +12,17 @@ function generateToken(
         }
     )
 }
+
+function getTokenData(
+    token: string
+    ): authenticationData {
+        const result: any = jwt.verify(
+            token,
+            process.env.JWT_KEY as string
+            )
+
+        return {id: result.id}
+    }
+
+
+
